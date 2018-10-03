@@ -1,12 +1,16 @@
 import Vue from 'vue/dist/vue.esm.js'
-import Router from './router/router'
+import router from './router/router'
 import Header from './components/header.vue'
 import { ApolloClient } from 'apollo-client'
 import VueApollo from 'vue-apollo'
+import { HttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 
 
 
+Vue.config.productionTip = false
 
+// install the vue-momnet plugin
 Vue.use(require('vue-moment'))
 Vue.use(VueApollo)
 
@@ -17,19 +21,13 @@ const apolloProvider = new VueApollo({
   })
 })
 
-
-
-
-
-
-var app = new Vue({
-  router: Router,
+/* eslint-disable no-new */
+new Vue({
   el: '#app',
   router,
   provide: apolloProvider.provide(),
   components: {
     'navbar': Header,
-     template: '<App/>'
-
   }
-});
+
+})

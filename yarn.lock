@@ -152,7 +152,16 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apollo-cache@1.1.17:
+apollo-cache-inmemory@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.2.10.tgz#362d6c36cfd815a309b966f71e5d2b6c770c7989"
+  integrity sha512-eBusPFVtYIuo+PIfJdAwUCQ4cs7AJ4mB7sTdXxNQCXToYw8mzE6EfHnV37kdVfBXSaa82BzE2rb/YUq/duuamw==
+  dependencies:
+    apollo-cache "^1.1.17"
+    apollo-utilities "^1.0.21"
+    graphql-anywhere "^4.1.19"
+
+apollo-cache@1.1.17, apollo-cache@^1.1.17:
   version "1.1.17"
   resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.17.tgz#1fcca8423125223723b97fd72808be91a1a76490"
   integrity sha512-7sp24n2HZO4vXgTaKNomLyIfGxG4gDdDkBB0jkRzRi7HhnKmfwhiF/RCiKNbgLdrPX151INdls0KwIVliD0dHQ==
@@ -173,6 +182,13 @@ apollo-client@^2.4.2:
     zen-observable "^0.8.0"
   optionalDependencies:
     "@types/async" "2.0.49"
+
+apollo-link-context@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/apollo-link-context/-/apollo-link-context-1.0.9.tgz#7fbc034de44546e957a840be76b2f6277c785e8f"
+  integrity sha512-gcC1WH7mTyNtS0bF4fPijepXqnERwZjm1JCkuOT6ADBTpDTXIqK+Ec+/QkVawDO26EV9OX5ujWe4kI1qC6T6tA==
+  dependencies:
+    apollo-link "^1.2.3"
 
 apollo-link-dedup@^1.0.0:
   version "1.0.10"
@@ -2826,6 +2842,13 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   integrity sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+
+graphql-anywhere@^4.1.19:
+  version "4.1.19"
+  resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-4.1.19.tgz#5f6ca3b58218e5449f4798e3c6d942fcd2fef082"
+  integrity sha512-mQlvbECzYPBcgBC9JsdM4v+DSvNmcIP+8Vwr+ij3gktbaLSE0Iza30mztuz40Jlf7ooMs+0emBZucNjLzqz7tA==
+  dependencies:
+    apollo-utilities "^1.0.21"
 
 graphql-tag@^2.10.0:
   version "2.10.0"
