@@ -1,27 +1,34 @@
 <template>
-  <div id="app">
-    <draggable :options="{ group: 'tasks' }" element="ul" v-for="list in tasks">
-      <li v-for="item in list">{{ item }}</li>
-    </draggable>
-
+  <div>
+    <h1>vue-apollo example: users</h1>
+    <div v-for="user in users" :key="user.id">
+        <div>{{ user.id }}, {{ user.name }}</div>
+    </div>
   </div>
 </template>
 
 <script>
-import draggable from 'vuedraggable';
+import gql from 'graphql-tag'
 
+const FeedQuery = gql`
+{
+  users {
+    ...namename
+  }
+}
+fragment namename on User {
+  name
+  id
+}
+`
 export default {
-  name: 'app',
-  components: {
-    draggable,
-  },
-  data() {
-    return {
-      tasks: [
-      ['task1-1', 'task1-2', 'task1-3', 'task1-4'],
-      ['task2-1', 'task2-2', 'task2-3', 'task2-4'],
-      ['task3-1', 'task3-2', 'task3-3', 'task3-4']
-      ]
+  data: () => ({
+    users: [{name: 'test'}]
+  }),
+  apollo: {
+    users: {
+      query: FeedQuery,
+      loadingKey: 'loading'
     }
   }
 }
