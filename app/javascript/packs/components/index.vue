@@ -12,18 +12,16 @@ import gql from 'graphql-tag'
 
 const FeedQuery = gql`
 {
-  users {
-    ...namename
+  user{
+
+    name
+    email
   }
-}
-fragment namename on User {
-  name
-  id
 }
 `
 export default {
   data: () => ({
-    users: [{name: 'test'}]
+    users: [{name: 'test1'}]
   }),
   apollo: {
     users: {
