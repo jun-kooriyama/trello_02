@@ -1,6 +1,6 @@
 <template>
-  <div>
-    
+  <!-- <div>
+
     <nav>
       <div class="nav-wrapper container">
         <router-link to="/" class="brand-logo left">Todo Application</router-link>
@@ -18,5 +18,6 @@
         </ul>
       </div>
     </nav>
-  </div>
+  </div> -->
+  <router-view/>
 </template>

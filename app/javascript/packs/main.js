@@ -26,8 +26,10 @@ new Vue({
   el: '#app',
   router,
   provide: apolloProvider.provide(),
-  components: {
-    'navbar': Header,
-  }
+  components: { Header },
+  template: '<Header/>'
+  // components: {
+  //   'navbar': Header,
+  // }
 
 })
