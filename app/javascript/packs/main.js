@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.esm.js'
-import router from './router/router'
-import Header from './components/header.vue'
+// import router from './router/router'
+import App from './components/app.vue'
 import { ApolloClient } from 'apollo-client'
 import VueApollo from 'vue-apollo'
 import { HttpLink } from 'apollo-link-http'
@@ -24,12 +24,12 @@ const apolloProvider = new VueApollo({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  // router,
   provide: apolloProvider.provide(),
-  components: { Header },
-  template: '<Header/>'
+  components: { App },
+
   // components: {
   //   'navbar': Header,
   // }
-
+  template: '<App/>'
 })
